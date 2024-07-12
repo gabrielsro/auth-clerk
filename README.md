@@ -4,8 +4,8 @@ Basic application for uploading and accessing data. The goal is to authenticate 
 
 ## TODO
 
-- [] Set up DB
-- [] Attach DB to UI
+- [x] Set up DB
+- [x] Attach DB to UI
 - [] Error Management (Sentry)
 - [] Analytics (Posthog)
 - [] Rate limiting (Upstash)

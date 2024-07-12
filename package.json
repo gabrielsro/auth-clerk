@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
@@ -11,6 +13,9 @@
   "dependencies": {
     "@clerk/nextjs": "^5.2.2",
     "@uploadthing/react": "^6.7.2",
+    "@vercel/postgres": "^0.9.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
@@ -20,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.23.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",

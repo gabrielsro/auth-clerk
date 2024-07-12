@@ -1,7 +1,23 @@
-export default function Home() {
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { db } from "../server/db/index";
+
+export default async function Home() {
+  const images = await db.query.images.findMany();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"></div>
+    <main className="">
+      <SignedOut>
+        <div className="w-full h-full text-2xl text-center">
+          Please sign in above
+        </div>
+      </SignedOut>
+      <SignedIn>
+        <div className="flex fles-wrap gap-4">
+          {images.map((image) => (
+            <div key={image.id}>{image.name}</div>
+          ))}
+        </div>
+      </SignedIn>
     </main>
   );
 }

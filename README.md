@@ -9,6 +9,6 @@ Basic application for uploading and accessing data. The goal is to authenticate 
 - [x] Add image upload
 - [x] Add taint (server-only)
 - [x] Use Next/Image component
-- [] Error Management (Sentry)
+- [x] Error Management (Sentry)
 - [] Analytics (Posthog)
 - [] Rate limiting (Upstash)

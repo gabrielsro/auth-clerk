@@ -7,8 +7,8 @@ Basic application for uploading and accessing data. The goal is to authenticate 
 - [x] Set up DB
 - [x] Attach DB to UI
 - [x] Add image upload
-- [] Add taint (server-only)
-- [] Use Next/Image component
+- [x] Add taint (server-only)
+- [x] Use Next/Image component
 - [] Error Management (Sentry)
 - [] Analytics (Posthog)
 - [] Rate limiting (Upstash)

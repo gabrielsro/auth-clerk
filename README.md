@@ -10,5 +10,6 @@ Basic application for uploading and accessing data. The goal is to authenticate 
 - [x] Add taint (server-only)
 - [x] Use Next/Image component
 - [x] Error Management (Sentry)
+- [x] Added parallel routes for HomePage image modal
 - [] Analytics (Posthog)
 - [] Rate limiting (Upstash)

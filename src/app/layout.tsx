@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className}`}>
+        <body className={`${inter.className} dark`}>
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <div className="h-screen grid grid-rows-[auto,1fr]">
             <TopNav />

@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,10 @@ export default function RootLayout({
           </div>
           {modal}
           <div id="modal-root" />
+          <Toaster
+            theme="dark"
+            // toastOptions={{ style: { background: "black", color: "white" } }}
+          />
         </body>
       </html>
     </ClerkProvider>

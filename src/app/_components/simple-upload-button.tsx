@@ -43,11 +43,35 @@ function UploadSvg() {
   );
 }
 
+function LoadingSpinner() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      stroke="#000"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="red"
+    >
+      <g className="spinner_V8m1">
+        <circle cx="12" cy="12" r="9.5" fill="white" stroke-width="3"></circle>
+      </g>
+    </svg>
+  );
+}
+
 export default function SimpleUploadButton() {
   const router = useRouter();
+
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      toast("Uploading...", { id: "upload-begin" });
+      toast(
+        <div className="flex gap-2 items-center">
+          <LoadingSpinner />
+          <span className="text-lg">Uploading...</span>
+        </div>,
+        { id: "upload-begin" }
+      );
     },
     onClientUploadComplete() {
       toast.dismiss("upload-begin");

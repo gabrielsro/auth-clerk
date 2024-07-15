@@ -7,6 +7,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
 import { Toaster } from "sonner";
+import { CSPostHogProvider } from "./_analytics/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      {/* <CSPostHogProvider> */}
       <html lang="en">
         <body className={`${inter.className} dark`}>
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
@@ -39,6 +41,7 @@ export default function RootLayout({
           />
         </body>
       </html>
+      {/* </CSPostHogProvider> */}
     </ClerkProvider>
   );
 }

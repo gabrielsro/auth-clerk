@@ -54,7 +54,7 @@ function LoadingSpinner() {
       fill="red"
     >
       <g className="spinner_V8m1">
-        <circle cx="12" cy="12" r="9.5" fill="white" stroke-width="3"></circle>
+        <circle cx="12" cy="12" r="9.5" fill="white" strokeWidth="3"></circle>
       </g>
     </svg>
   );

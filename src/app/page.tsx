@@ -3,8 +3,10 @@ import { db } from "../server/db/index";
 import { getMyImages } from "@/server/queries";
 import Image from "next/image";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 export const dynamic = "force-dynamic";
+posthog.capture("my event", { property: "value" });
 
 async function Images() {
   const images = await getMyImages();

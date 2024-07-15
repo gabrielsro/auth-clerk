@@ -25,23 +25,20 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      {/* <CSPostHogProvider> */}
-      <html lang="en">
-        <body className={`${inter.className} dark`}>
-          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-          <div className="h-screen grid grid-rows-[auto,1fr]">
-            <TopNav />
-            <main className="overflow-y-scroll">{children}</main>
-          </div>
-          {modal}
-          <div id="modal-root" />
-          <Toaster
-            theme="dark"
-            // toastOptions={{ style: { background: "black", color: "white" } }}
-          />
-        </body>
-      </html>
-      {/* </CSPostHogProvider> */}
+      <CSPostHogProvider>
+        <html lang="en">
+          <body className={`${inter.className} dark`}>
+            <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+            <div className="h-screen grid grid-rows-[auto,1fr]">
+              <TopNav />
+              <main className="overflow-y-scroll">{children}</main>
+            </div>
+            {modal}
+            <div id="modal-root" />
+            <Toaster theme="dark" />
+          </body>
+        </html>
+      </CSPostHogProvider>
     </ClerkProvider>
   );
 }

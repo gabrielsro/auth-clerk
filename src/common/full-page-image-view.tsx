@@ -19,7 +19,7 @@ export default async function FullPageImageView(props: { id: string }) {
           <span>{uploaderInfo.fullName}</span>
         </div>
         <div className="p-2">
-          <span>Created On:</span>
+          <span>Created On</span>
           <span>{new Date(uploaderInfo.createdAt).toLocaleDateString()}</span>
         </div>
         <div className="p-2">

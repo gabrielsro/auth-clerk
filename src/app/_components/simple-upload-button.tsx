@@ -67,7 +67,7 @@ export default function SimpleUploadButton() {
 
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      posthog.capture("upload_begin");
+      posthog.capture("upload begin");
       toast(
         <div className="flex gap-2 items-center">
           <LoadingSpinner />
@@ -75,6 +75,11 @@ export default function SimpleUploadButton() {
         </div>,
         { id: "upload-begin" }
       );
+    },
+    onUploadError(error) {
+      posthog.capture("upload error", { error });
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
     },
     onClientUploadComplete() {
       toast.dismiss("upload-begin");

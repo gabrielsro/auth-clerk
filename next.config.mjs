@@ -4,6 +4,15 @@ const nextConfig = {
   images: { remotePatterns: [{ hostname: "utfs.io" }] },
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
+  async redirects() {
+    return [
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withSentryConfig(

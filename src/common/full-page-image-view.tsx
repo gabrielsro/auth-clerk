@@ -15,11 +15,11 @@ export default async function FullPageImageView(props: { id: string }) {
       <div className="w-48 flex flex-col flex-shrink-0 border-l">
         <div className="text-xl border-b text-center p-2">{image.name}</div>
         <div className="p-2">
-          <span>Uploaded By:</span>
+          <span>Uploader:</span>
           <span>{uploaderInfo.fullName}</span>
         </div>
         <div className="p-2">
-          <span>Created On</span>
+          <span>Created On:</span>
           <span>{new Date(uploaderInfo.createdAt).toLocaleDateString()}</span>
         </div>
         <div className="p-2">

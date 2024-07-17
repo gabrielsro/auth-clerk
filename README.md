@@ -12,4 +12,4 @@ Basic application for uploading and accessing data. The goal is to authenticate 
 - [x] Error Management (Sentry)
 - [x] Added parallel routes for HomePage image modal
 - [x] Analytics (Posthog)
-- [] Rate limiting (Upstash)
+- [x] Rate limiting (Upstash)
